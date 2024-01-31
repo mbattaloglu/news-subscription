@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Subsription</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <div class="root">
+      <form class="subscription-form">
+        <h2 class="subscription-form__title">Subscribe to our Newsletter</h2>
+        <label class="subscription-form__label" id="name-label" for="name">
+          <input
+            class="subscription-form__input"
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Name"
+          />
+        </label>
+        <label class="subscription-form__label" id="email-label" for="email">
+          <input
+            class="subscription-form__input"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email"
+          />
+        </label>
+        <div class="subscription-form__result-box">
+          <button class="btn" id="submit-btn">Subscribe</button>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script src="../src/utils/createElementHandler.js"></script>
+  <script src="../src/utils/clearElementHandler.js"></script>
+  <script src="../src/utils/backgroundHandler.js"></script>
+  <script src="../src/utils/validateEmail.js"></script>
+  <script src="../src/utils/validateName.js"></script>
+  <script src="../src/main.js"></script>
+</html>
