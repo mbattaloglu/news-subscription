@@ -1,9 +1,9 @@
 function createResultText(status, text) {
-  if (!status || !text) return;
-
   const resultBox = document.querySelector(".subscription-form__result-box");
+  if (!status || !text || !resultBox) return;
 
   let textElement = document.createElement("div");
+
   switch (status) {
     case "success":
       textElement.classList += "subscription-form__text_success";
@@ -11,13 +11,14 @@ function createResultText(status, text) {
     case "fail":
       textElement.classList += "subscription-form__text_error";
   }
+  
   textElement.innerText += text;
   resultBox.append(textElement);
 }
 
 function createErrorNotifier(text, parent) {
   if (!text || !parent) return;
-  
+
   const modal = document.createElement("div");
   modal.classList += "subscription-form__modal_error";
   modal.innerText += text;
