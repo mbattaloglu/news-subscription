@@ -33,4 +33,21 @@ class DatabaseConnector
     {
         return $this->connection;
     }
+
+    public function checkUserExists(string $email)
+    {
+        $query = $this->connection->prepare("SELECT * FROM users WHERE email = :email");
+        $query->execute((array("email" => $email)));
+        $result = $query->fetch();
+
+        return $result;
+    }
+
+    public function insertUser(string $name, string $email)
+    {
+        $query = $this->connection->prepare("INSERT INTO users (name, email) VALUES (:name, :email)");
+        $query->execute((array("name" => $name, "email" => $email)));
+
+        return ($query->rowCount() > 0);
+    }
 }
