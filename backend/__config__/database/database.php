@@ -23,7 +23,8 @@ class DatabaseConnector
             $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $this->connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
-            echo "" . $e->getMessage();
+            $response = array("message" => "Subscription Unsuccessfull", "success" => false, "error" => "Database connection failed. Get contact with the admins.");
+            echo json_encode($response);
             die();
         }
     }

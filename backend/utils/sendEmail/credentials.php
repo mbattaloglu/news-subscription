@@ -2,8 +2,9 @@
 
 class Credentials
 {
-    private string $senderEmail = "your-credentials";
-    private string $senderPassword = "your-credentials";
+    private string $senderEmail = "YOUR-CREDENTIALS";
+    private string $senderPassword = "YOUR-CREDENTIALS";
+    private string $senderName = "YOUR-CREDENTIALS";
 
     public function getSenderEmail()
     {
@@ -13,5 +14,10 @@ class Credentials
     public function getSenderPassword()
     {
         return $this->senderPassword;
+    }
+
+    public function getSenderName()
+    {
+        return $this->senderName;
     }
 }

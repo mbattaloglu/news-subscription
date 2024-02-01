@@ -7,7 +7,7 @@ function validateEmail(email) {
     throw new Error("Email contains invalid characters.");
 
   //Test the email structure
-  const emailStructureRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  const emailStructureRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{1,}$/;
   if (!emailStructureRegex.test(email)) throw new Error("Email is not valid.");
 
   return true;
