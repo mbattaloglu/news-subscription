@@ -1,5 +1,5 @@
 <?php
-function cors()
+function corsHandler()
 {
     header('Access-Control-Allow-Origin: *');
 }
