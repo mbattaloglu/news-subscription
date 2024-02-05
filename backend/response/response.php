@@ -38,10 +38,13 @@ class Response
 
     public function genereateResponseJSON()
     {
-        return array(
-            "message" => $this->message,
-            "success" => $this->success,
-            "error" => $this->error
-        );
+        return
+            json_encode(
+                array(
+                    "message" => $this->message,
+                    "success" => $this->success,
+                    "error" => $this->error
+                )
+            );
     }
 }

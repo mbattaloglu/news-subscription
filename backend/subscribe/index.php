@@ -8,7 +8,7 @@ require "../response/response.php";
 function sendResponse()
 {
     global $response;
-    echo json_encode($response->genereateResponseJSON());
+    echo $response->genereateResponseJSON();
     exit; //terminate
 }
 

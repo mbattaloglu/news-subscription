@@ -2,8 +2,8 @@ async function subscribe(name, email) {
   if (!name || !email) throw new Error("Please proivde user information");
 
   const formData = new FormData();
-  formData.append("name", nameInput.value);
-  formData.append("email", emailInput.value);
+  formData.append("name", name);
+  formData.append("email", email);
 
   const response = await fetch(
     "http://localhost/news-subscription/subscribe/",
